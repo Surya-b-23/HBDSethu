@@ -29,10 +29,11 @@
 
     </head>
     <body>
-        <audio id="myAudio" autoplay hidden>
-            <source src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" type="audio/mpeg">
-            <source src="./WhatsApp-Audio-2022-05-29-at-10.44.37-PM.ogg" type="audio/ogg" >
-        </audio>
+        <!-- <iframe src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" allow="autoplay" id="iframeAudio">
+        </iframe>  -->
+        
+        <audio src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" autoplay id="myAudio" hidden></audio>
+   <button onClick="playMyAudio()">Click pandra</button>
         <div class="container">
             <div>
             <img style="margin: 10px;" src="./WhatsApp Image 2022-05-29 at 10.19.50 PM.jpeg" width="300px">
@@ -43,15 +44,18 @@
             </div>
         </div>
         <img class="gif" src="./text.gif">
-        <button onclick="myFunction()">Try it</button>
+        <!-- <audio src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" id="myAudio" hidden></audio>
+   <button onClick="playMyAudio()">Click pandra</button> -->
+   <script>
+     function playMyAudio(){
+       document.getElementById("myAudio").play();
+     }
+   </script>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myAudio").autoplay;
-  document.getElementById("demo").innerHTML = x;
-}
+
 </script>
     </body>
 </html>
