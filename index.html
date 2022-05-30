@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Happy Birthday</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 display: flex;
@@ -25,12 +26,12 @@
                 }
             }
         </style>
-        
+
     </head>
     <body>
-        <audio autoplay>
+        <audio id="myAudio" autoplay hidden>
             <source src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" type="audio/mpeg">
-            <!-- <source src="./WhatsApp-Audio-2022-05-29-at-10.44.37-PM.ogg" > -->
+            <source src="./WhatsApp-Audio-2022-05-29-at-10.44.37-PM.ogg" type="audio/ogg" >
         </audio>
         <div class="container">
             <div>
@@ -42,5 +43,15 @@
             </div>
         </div>
         <img class="gif" src="./text.gif">
+        <button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
     </body>
 </html>
