@@ -25,8 +25,13 @@
                 border-radius: 20px;
                 font-size: 20px;
                 font-weight: 600;
+                position: relative;
                 border: 2px solid black;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            #image{
+                display: none;
+                visibility: hidden;
             }
             @media screen and (max-width: 600px) {
 
@@ -53,11 +58,22 @@
             </div>
         </div>
         <img class="gif" src="./text.gif">
-        <!-- <audio src="./WhatsApp Audio 2022-05-29 at 10.44.37 PM.mp3" id="myAudio" hidden></audio>
-   <button onClick="playMyAudio()">Click pandra</button> -->
+        <audio src="./WhatsApp Audio 2022-05-29 at 10.23.19 PM.mp3"  id="Audio" hidden></audio>
+   <button onClick="play()">Suprise Gift</button>
+   <div id="image" >
+   <img class="image"  src="./gpmuthu-sethapayale.gif" style="margin: 10px;" width="300px">
+
+   </div>
+
    <script>
+       document.getElementById('image').style.display = "block";
      function playMyAudio(){
        document.getElementById("myAudio").play();
+     }
+     function play(){
+        document.getElementById("myAudio").pause();
+        document.getElementById("Audio").play();
+        document.getElementById('image').style.visibility = "visible";
      }
    </script>
 
